@@ -4,11 +4,11 @@ class Student < ActiveRecord::Base
   end
 
   def set_status
-    active = !active
+    self.active = !self.active
     self.save
   end
 
   def status
-    active ? "active" : "inactive"
+    self.active ? "active" : "inactive"
   end
 end
