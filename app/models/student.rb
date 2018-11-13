@@ -5,7 +5,7 @@ class Student < ActiveRecord::Base
 
   def set_status
     active = !active
-    save
+    self.save
   end
 
   def status
