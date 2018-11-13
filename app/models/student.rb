@@ -6,4 +6,8 @@ class Student < ActiveRecord::Base
   def set_status
     self.active = !self.active
   end
+
+  def status
+    self.active ? "active" : "inactive"
+  end
 end
